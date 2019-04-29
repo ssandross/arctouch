@@ -1,0 +1,14 @@
+<p>Page: {{data.page}} - <a href="/next-page/{{data.page}}">Next page</a> - Total: {{data.total_pages}}</p>
+<table class="table">
+    <tbody>
+        {{#each data.results}}
+        <tr>
+            <th scope="row">
+                <img src="http://image.tmdb.org/t/p/w185/{{poster_path}}" width="65" height="90">
+            </th>
+            <td>{{title}}</td>
+            <td><a href="/more-info/{{id}}">More info</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
